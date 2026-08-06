@@ -6,7 +6,9 @@ const SUPABASE_URL = 'https://jndyzcoszencvjeswywj.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuZHl6Y29zemVuY3ZqZXN3eXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM3Mzc1ODksImV4cCI6MjA5OTMxMzU4OX0.iGRNe0f7_WUcbxmk3PEqQGWWB9x_M_HT5dRRZYmAdrY';
 
 // 创建 Supabase 客户端
-const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+// 注意：CDN 的 UMD 包会在 window.supabase 上挂载 createClient，
+// 这里用 sbClient 避免与 UMD 全局变量重名冲突。
+const sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // 设备角色选项（与固件 config.h 对应）
 const ROLE_OPTIONS = [

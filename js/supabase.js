@@ -30,7 +30,7 @@ function getCurrentUserId() {
  * @returns {Promise<{data: Array, error: Object|null}>}
  */
 async function fetchDevices() {
-    const { data, error } = await supabase
+    const { data, error } = await sbClient
         .from('devices')
         .select('*')
         .order('created_at', { ascending: true });
@@ -53,7 +53,7 @@ async function createDevice(deviceData) {
     const userId = getCurrentUserId();
     if (!userId) return { data: null, error: { message: '未登录' } };
 
-    const { data, error } = await supabase
+    const { data, error } = await sbClient
         .from('devices')
         .insert([{ ...deviceData, owner_id: userId }])
         .select()
@@ -67,7 +67,7 @@ async function createDevice(deviceData) {
  * @param {Object} updates - 要更新的字段
  */
 async function updateDevice(deviceId, updates) {
-    const { data, error } = await supabase
+    const { data, error } = await sbClient
         .from('devices')
         .update(updates)
         .eq('id', deviceId)
@@ -81,7 +81,7 @@ async function updateDevice(deviceId, updates) {
  * @param {string} deviceId - 设备 UUID
  */
 async function deleteDeviceById(deviceId) {
-    const { error } = await supabase
+    const { error } = await sbClient
         .from('devices')
         .delete()
         .eq('id', deviceId);
@@ -105,7 +105,7 @@ async function fetchDeviceLinks() {
     const deviceIds = devices.map(d => d.id);
 
     // 查询涉及这些设备的所有连接
-    const { data: links, error } = await supabase
+    const { data: links, error } = await sbClient
         .from('device_links')
         .select('*')
         .or(`device_a_id.in.(${deviceIds.join(',')}),device_b_id.in.(${deviceIds.join(',')})`)
@@ -135,7 +135,7 @@ async function createDeviceLink(deviceAId, deviceBId) {
     // 确保顺序一致（小的 UUID 在前），避免重复
     const [a, b] = [deviceAId, deviceBId].sort();
 
-    const { data, error } = await supabase
+    const { data, error } = await sbClient
         .from('device_links')
         .insert([{ device_a_id: a, device_b_id: b }])
         .select()
@@ -148,7 +148,7 @@ async function createDeviceLink(deviceAId, deviceBId) {
  * @param {string} linkId - 连接记录 UUID
  */
 async function deleteDeviceLink(linkId) {
-    const { error } = await supabase
+    const { error } = await sbClient
         .from('device_links')
         .delete()
         .eq('id', linkId);

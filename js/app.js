@@ -32,7 +32,7 @@ function showAppPage(user) {
  */
 async function initApp() {
     // 检查当前会话
-    const { data: { session } } = await supabase.auth.getSession();
+    const { data: { session } } = await sbClient.auth.getSession();
 
     if (session?.user) {
         showAppPage(session.user);
@@ -41,7 +41,7 @@ async function initApp() {
     }
 
     // 监听认证状态变化
-    supabase.auth.onAuthStateChange((event, session) => {
+    sbClient.auth.onAuthStateChange((event, session) => {
         if (event === 'SIGNED_IN' && session?.user) {
             showAppPage(session.user);
         } else if (event === 'SIGNED_OUT') {

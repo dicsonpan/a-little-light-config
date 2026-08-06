@@ -50,7 +50,7 @@ async function handleLogin() {
 
     setButtonLoading('login-btn', true);
 
-    const { data, error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await sbClient.auth.signInWithPassword({
         email,
         password,
     });
@@ -91,7 +91,7 @@ async function handleRegister() {
 
     setButtonLoading('register-btn', true);
 
-    const { data, error } = await supabase.auth.signUp({
+    const { data, error } = await sbClient.auth.signUp({
         email,
         password,
     });
@@ -118,6 +118,6 @@ async function handleRegister() {
  * 处理登出
  */
 async function handleLogout() {
-    await supabase.auth.signOut();
+    await sbClient.auth.signOut();
     showToast('已退出登录', 'info');
 }
