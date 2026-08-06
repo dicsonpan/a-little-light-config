@@ -1,9 +1,12 @@
 // ============================================================
-// Supabase 配置 — 与固件 config.h 中的值保持一致
+// Supabase 配置
+// 占位符由 Vercel 构建脚本 scripts/generate-config.js 从环境变量注入
+// 本地开发时请手动替换 __SUPABASE_URL__ 和 __SUPABASE_ANON_KEY__
+// 环境变量名：SUPABASE_URL / SUPABASE_ANON_KEY
 // ============================================================
 
-const SUPABASE_URL = 'https://jndyzcoszencvjeswywj.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuZHl6Y29zemVuY3ZqZXN3eXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM3Mzc1ODksImV4cCI6MjA5OTMxMzU4OX0.iGRNe0f7_WUcbxmk3PEqQGWWB9x_M_HT5dRRZYmAdrY';
+const SUPABASE_URL = '__SUPABASE_URL__';
+const SUPABASE_ANON_KEY = '__SUPABASE_ANON_KEY__';
 
 // 创建 Supabase 客户端
 // 注意：CDN 的 UMD 包会在 window.supabase 上挂载 createClient，
