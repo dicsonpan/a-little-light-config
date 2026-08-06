@@ -57,7 +57,7 @@ async function loadDevices() {
                     <line x1="12" y1="18" x2="12" y2="18"/>
                 </svg>
                 <h3>还没有设备</h3>
-                <p>点击「添加设备」开始配置</p>
+                <p>三击设备蓝色按钮获取设备ID，然后点击「添加设备」</p>
             </div>
         `;
         return;
@@ -196,7 +196,7 @@ async function saveDevice() {
     const lon = parseFloat(document.getElementById('device-lon').value) || 0;
 
     // 验证必填字段
-    if (!code) { showToast('请填写设备代码', 'error'); return; }
+    if (!code) { showToast('请填写设备ID', 'error'); return; }
     if (!displayName) { showToast('请填写显示名称', 'error'); return; }
 
     const deviceData = {

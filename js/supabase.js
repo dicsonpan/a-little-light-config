@@ -40,7 +40,7 @@ async function fetchDevices() {
 /**
  * 创建新设备
  * @param {Object} deviceData - 设备信息
- * @param {string} deviceData.device_code - 设备代码
+ * @param {string} deviceData.device_code - 设备ID（三击设备蓝色按钮获取）
  * @param {string} deviceData.display_name - 显示名称
  * @param {string} deviceData.role - 角色
  * @param {string} deviceData.timezone - 时区
