@@ -238,7 +238,11 @@ async function saveDevice() {
         setButtonLoading('device-save-btn', false, '保存');
 
         if (error) {
-            showToast('创建失败：' + error.message, 'error');
+            if (error.code === '23505') {
+                showToast('该设备ID已存在，请检查设备ID是否正确', 'error');
+            } else {
+                showToast('创建失败：' + error.message, 'error');
+            }
             return;
         }
         showToast('设备已创建', 'success');
