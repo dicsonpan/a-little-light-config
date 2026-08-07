@@ -750,6 +750,42 @@ select {
     border-radius: 12px;
 }
 
+.landing-hero-login-hint {
+    margin-top: 20px;
+    font-size: 13px;
+    color: rgba(255, 248, 240, 0.4);
+}
+
+.landing-hero-login-link {
+    color: rgba(255, 214, 107, 0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.landing-hero-login-link:hover {
+    color: #FFD66B;
+}
+
+.landing-scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 248, 240, 0.3);
+    cursor: pointer;
+    animation: scrollBounce 2s ease-in-out infinite;
+    transition: color 0.2s;
+}
+
+.landing-scroll-indicator:hover {
+    color: rgba(255, 248, 240, 0.6);
+}
+
+@keyframes scrollBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+}
+
 /* 通用 section */
 .landing-section {
     padding: 80px 0;
