@@ -5,10 +5,10 @@
 /**
  * 从着陆页进入应用（登录/注册或直接进入仪表盘）
  */
-function enterApp() {
+async function enterApp() {
     document.getElementById('landing-page').classList.add('hidden');
     // 检查是否已登录
-    const { data: { session } } = sbClient.auth.getSession();
+    const { data: { session } } = await sbClient.auth.getSession();
     if (session?.user) {
         showAppPage(session.user);
     } else {
