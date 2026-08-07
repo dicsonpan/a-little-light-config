@@ -20,9 +20,10 @@ const ROLE_OPTIONS = [
     { value: 'younger_brother',  label: '弟弟',     avatar: 'younger_brother' },
     { value: 'dad',              label: '爸爸',     avatar: 'dad' },
     { value: 'sister',           label: '姐姐',     avatar: 'sister' },
+    { value: 'younger_sister',   label: '妹妹',     avatar: 'younger_sister' },
     { value: 'grandma',          label: '奶奶',     avatar: 'grandma' },
     { value: 'grandpa',          label: '爷爷',     avatar: 'grandpa' },
-    { value: 'custom',           label: '自定义',   avatar: 'default' },
+    { value: 'custom',           label: '自定义',   avatar: 'custom' },
 ];
 
 // 常用时区

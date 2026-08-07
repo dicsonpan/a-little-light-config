@@ -140,7 +140,6 @@ function openDeviceModal(deviceId = null) {
         document.getElementById('device-code').disabled = true;
         document.getElementById('device-display-name').value = device.display_name || '';
         document.getElementById('device-role').value = device.role || 'custom';
-        document.getElementById('device-avatar-style').value = device.avatar_style || '';
         document.getElementById('device-timezone').value = device.timezone || 'Asia/Shanghai';
         document.getElementById('device-city').value = device.city_name || '';
         document.getElementById('device-lat').value = device.latitude || '';
@@ -155,7 +154,6 @@ function openDeviceModal(deviceId = null) {
         document.getElementById('device-code').disabled = false;
         document.getElementById('device-role').value = 'mom';
         document.getElementById('device-timezone').value = 'Asia/Shanghai';
-        onRoleChange();
     }
 
     modal.classList.remove('hidden');
@@ -169,19 +167,6 @@ function closeDeviceModal() {
 }
 
 /**
- * 角色选择变化时自动填充头像风格
- */
-function onRoleChange() {
-    const role = document.getElementById('device-role').value;
-    const avatarInput = document.getElementById('device-avatar-style');
-    // 只有在空值或与之前角色匹配时才自动填充
-    const roleOption = ROLE_OPTIONS.find(r => r.value === role);
-    if (roleOption && (!avatarInput.value || ROLE_OPTIONS.some(r => r.avatar === avatarInput.value))) {
-        avatarInput.value = roleOption.avatar;
-    }
-}
-
-/**
  * 保存设备（新增或更新）
  */
 async function saveDevice() {
@@ -189,7 +174,6 @@ async function saveDevice() {
     const code = document.getElementById('device-code').value.trim().toUpperCase();
     const displayName = document.getElementById('device-display-name').value.trim();
     const role = document.getElementById('device-role').value;
-    const avatarStyle = document.getElementById('device-avatar-style').value.trim();
     const timezone = document.getElementById('device-timezone').value;
     const city = document.getElementById('device-city').value.trim();
     const lat = parseFloat(document.getElementById('device-lat').value) || 0;
@@ -203,7 +187,7 @@ async function saveDevice() {
         device_code: code,
         display_name: displayName,
         role,
-        avatar_style: avatarStyle || role,
+        avatar_style: role,
         timezone,
         city_name: city,
         latitude: lat,
@@ -217,7 +201,7 @@ async function saveDevice() {
         const { data, error } = await updateDevice(deviceId, {
             display_name: displayName,
             role,
-            avatar_style: avatarStyle || role,
+            avatar_style: role,
             timezone,
             city_name: city,
             latitude: lat,

@@ -47,7 +47,7 @@ async function fetchDevices() {
  * @param {string} deviceData.city_name - 城市名
  * @param {number} deviceData.latitude - 纬度
  * @param {number} deviceData.longitude - 经度
- * @param {string} deviceData.avatar_style - 头像风格
+ * @param {string} deviceData.avatar_style - 头像风格（自动取 role 值，由角色决定头像）
  */
 async function createDevice(deviceData) {
     const userId = getCurrentUserId();
