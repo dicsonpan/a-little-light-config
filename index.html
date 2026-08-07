@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>一点光 · 设备配置</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -16,10 +20,36 @@
 <div id="auth-page" class="auth-page">
     <div class="auth-card">
         <div class="auth-logo">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                <circle cx="28" cy="28" r="26" stroke="#FF8C42" stroke-width="2" fill="#FFF4E6"/>
-                <path d="M28 14 C20 14, 14 20, 14 28 C14 36, 20 42, 28 42 C36 42, 42 36, 42 28 C42 20, 36 14, 28 14 Z M28 20 C32 20, 36 24, 36 28 C36 32, 32 36, 28 36 C24 36, 20 32, 20 28 C20 24, 24 20, 28 20 Z" fill="#FF8C42"/>
-                <circle cx="28" cy="28" r="4" fill="#FFD66B"/>
+            <svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="authLightGlow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#FFFEF0"/>
+                        <stop offset="15%" stop-color="#FFE082"/>
+                        <stop offset="35%" stop-color="#FFB74D"/>
+                        <stop offset="60%" stop-color="#FF8C42" stop-opacity="0.5"/>
+                        <stop offset="100%" stop-color="#FF8C42" stop-opacity="0"/>
+                    </radialGradient>
+                    <radialGradient id="authBgGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#1a1f2e"/>
+                        <stop offset="100%" stop-color="#0a0f1a"/>
+                    </radialGradient>
+                </defs>
+                <circle cx="28" cy="28" r="27" fill="url(#authBgGrad)"/>
+                <circle cx="28" cy="28" r="27" fill="none" stroke="#2a3040" stroke-width="0.5"/>
+                <circle cx="11" cy="13" r="0.9" fill="#FFFFFF" opacity="0.7"/>
+                <circle cx="46" cy="15" r="0.6" fill="#FFFFFF" opacity="0.4"/>
+                <circle cx="9" cy="40" r="0.5" fill="#FFFFFF" opacity="0.3"/>
+                <circle cx="47" cy="42" r="0.7" fill="#FFFFFF" opacity="0.5"/>
+                <circle cx="42" cy="9" r="0.4" fill="#FFFFFF" opacity="0.3"/>
+                <circle cx="14" cy="48" r="0.4" fill="#FFFFFF" opacity="0.25"/>
+                <line x1="28" y1="4" x2="28" y2="8" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+                <line x1="28" y1="48" x2="28" y2="52" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+                <line x1="4" y1="28" x2="8" y2="28" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+                <line x1="48" y1="28" x2="52" y2="28" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+                <circle cx="28" cy="28" r="22" fill="url(#authLightGlow)" opacity="0.2"/>
+                <circle cx="28" cy="28" r="15" fill="url(#authLightGlow)" opacity="0.5"/>
+                <circle cx="28" cy="28" r="10" fill="url(#authLightGlow)"/>
+                <circle cx="28" cy="28" r="3.5" fill="#FFFEF0"/>
             </svg>
         </div>
         <h1 class="auth-title">一点光</h1>
@@ -72,9 +102,25 @@
     <header class="app-header">
         <div class="header-left">
             <div class="header-logo">
-                <svg width="28" height="28" viewBox="0 0 56 56" fill="none">
-                    <circle cx="28" cy="28" r="26" stroke="#FF8C42" stroke-width="2" fill="#FFF4E6"/>
-                    <circle cx="28" cy="28" r="4" fill="#FFD66B"/>
+                <svg width="28" height="28" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="headerLightGlow" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#FFFEF0"/>
+                            <stop offset="20%" stop-color="#FFE082"/>
+                            <stop offset="45%" stop-color="#FFB74D"/>
+                            <stop offset="75%" stop-color="#FF8C42" stop-opacity="0.4"/>
+                            <stop offset="100%" stop-color="#FF8C42" stop-opacity="0"/>
+                        </radialGradient>
+                        <radialGradient id="headerBgGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#1a1f2e"/>
+                            <stop offset="100%" stop-color="#0a0f1a"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="28" cy="28" r="27" fill="url(#headerBgGrad)"/>
+                    <circle cx="28" cy="28" r="20" fill="url(#headerLightGlow)" opacity="0.25"/>
+                    <circle cx="28" cy="28" r="14" fill="url(#headerLightGlow)" opacity="0.55"/>
+                    <circle cx="28" cy="28" r="9" fill="url(#headerLightGlow)"/>
+                    <circle cx="28" cy="28" r="3.5" fill="#FFFEF0"/>
                 </svg>
             </div>
             <span class="header-title">一点光</span>

@@ -1,0 +1,44 @@
+<svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 主光晕渐变 -->
+    <radialGradient id="lightGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFEF0"/>
+      <stop offset="15%" stop-color="#FFE082"/>
+      <stop offset="35%" stop-color="#FFB74D"/>
+      <stop offset="60%" stop-color="#FF8C42" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FF8C42" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 背景渐变 -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1f2e"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 深夜圆形背景 -->
+  <circle cx="28" cy="28" r="27" fill="url(#bgGrad)"/>
+  <circle cx="28" cy="28" r="27" fill="none" stroke="#2a3040" stroke-width="0.5"/>
+
+  <!-- 星点 -->
+  <circle cx="11" cy="13" r="0.9" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="46" cy="15" r="0.6" fill="#FFFFFF" opacity="0.4"/>
+  <circle cx="9" cy="40" r="0.5" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="47" cy="42" r="0.7" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="42" cy="9" r="0.4" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="14" cy="48" r="0.4" fill="#FFFFFF" opacity="0.25"/>
+  <circle cx="48" cy="28" r="0.3" fill="#FFFFFF" opacity="0.2"/>
+
+  <!-- 四向微光 -->
+  <line x1="28" y1="4" x2="28" y2="8" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+  <line x1="28" y1="48" x2="28" y2="52" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+  <line x1="4" y1="28" x2="8" y2="28" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+  <line x1="48" y1="28" x2="52" y2="28" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+
+  <!-- 三层光晕 -->
+  <circle cx="28" cy="28" r="22" fill="url(#lightGlow)" opacity="0.2"/>
+  <circle cx="28" cy="28" r="15" fill="url(#lightGlow)" opacity="0.5"/>
+  <circle cx="28" cy="28" r="10" fill="url(#lightGlow)"/>
+
+  <!-- 光芯 -->
+  <circle cx="28" cy="28" r="3.5" fill="#FFFEF0"/>
+</svg>
