@@ -15,9 +15,241 @@
 <body>
 
 <!-- ============================================================
+     产品介绍着陆页
+     ============================================================ -->
+<div id="landing-page" class="landing-page">
+    <!-- Hero -->
+    <section class="landing-hero">
+        <div class="landing-hero-content">
+            <div class="landing-hero-logo">
+                <svg width="72" height="72" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="heroLightGlow" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#FFFEF0"/>
+                            <stop offset="15%" stop-color="#FFE082"/>
+                            <stop offset="35%" stop-color="#FFB74D"/>
+                            <stop offset="60%" stop-color="#FF8C42" stop-opacity="0.5"/>
+                            <stop offset="100%" stop-color="#FF8C42" stop-opacity="0"/>
+                        </radialGradient>
+                        <radialGradient id="heroBgGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#1a1f2e"/>
+                            <stop offset="100%" stop-color="#0a0f1a"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="28" cy="28" r="27" fill="url(#heroBgGrad)"/>
+                    <circle cx="11" cy="13" r="0.9" fill="#FFFFFF" opacity="0.7"/>
+                    <circle cx="46" cy="15" r="0.6" fill="#FFFFFF" opacity="0.4"/>
+                    <circle cx="9" cy="40" r="0.5" fill="#FFFFFF" opacity="0.3"/>
+                    <circle cx="47" cy="42" r="0.7" fill="#FFFFFF" opacity="0.5"/>
+                    <circle cx="42" cy="9" r="0.4" fill="#FFFFFF" opacity="0.3"/>
+                    <circle cx="14" cy="48" r="0.4" fill="#FFFFFF" opacity="0.25"/>
+                    <line x1="28" y1="4" x2="28" y2="8" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+                    <line x1="28" y1="48" x2="28" y2="52" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+                    <line x1="4" y1="28" x2="8" y2="28" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+                    <line x1="48" y1="28" x2="52" y2="28" stroke="#FFD66B" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+                    <circle cx="28" cy="28" r="22" fill="url(#heroLightGlow)" opacity="0.2"/>
+                    <circle cx="28" cy="28" r="15" fill="url(#heroLightGlow)" opacity="0.5"/>
+                    <circle cx="28" cy="28" r="10" fill="url(#heroLightGlow)"/>
+                    <circle cx="28" cy="28" r="3.5" fill="#FFFEF0"/>
+                </svg>
+            </div>
+            <h1 class="landing-hero-title">一点光</h1>
+            <p class="landing-hero-tagline">跨越距离的语音光</p>
+            <p class="landing-hero-desc">想念不会等方便的时候才来。<br>按住就说，松开就飞，亮了就听。</p>
+            <button class="btn btn-primary landing-cta-btn" onclick="enterApp()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12,5 19,12 12,19"/>
+                </svg>
+                开始使用
+            </button>
+        </div>
+    </section>
+
+    <!-- 故事 -->
+    <section class="landing-section landing-story">
+        <div class="landing-container">
+            <p class="landing-story-quote">"8000公里，6小时时差。<br>放学的时候妈妈在上班，妈妈下班的时候我们在睡觉。"</p>
+            <p class="landing-story-text">
+                不是每个想念都能等到方便的时候。<br>
+                于是我们做了一样东西——没有App，没有菜单，不用解锁手机，不用打开微信。<br>
+                <span class="landing-story-highlight">枕头旁边亮起一点光，就够了。</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- 功能 -->
+    <section class="landing-section landing-features">
+        <div class="landing-container">
+            <h2 class="landing-section-title">为什么是一点光</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" y1="19" x2="12" y2="23"/>
+                        </svg>
+                    </div>
+                    <h3>一键语音</h3>
+                    <p>长按说话，松开发送。不用打开任何App，不用解锁任何屏幕。60秒语音，飞越千里。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <h3>跨时区信息面板</h3>
+                    <p>拿起它，就知道对方几点了，什么天气，多少度。屏幕底色随天气变化——晴绿、雨蓝、雪白。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>个人头像</h3>
+                    <p>每个人都有自己的像素头像。屏幕亮起来的时候，先看到头像——就知道是谁来了。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="6" cy="12" r="3"/>
+                            <circle cx="18" cy="6" r="3"/>
+                            <circle cx="18" cy="18" r="3"/>
+                            <line x1="9" y1="11" x2="15" y2="7"/>
+                            <line x1="9" y1="13" x2="15" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>一对多通信</h3>
+                    <p>妈妈说一句话，两个孩子同时收到。每条消息只去该去的地方——简单、私密、刚刚好。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </div>
+                    <h3>深夜保护</h3>
+                    <p>发送前会检查对方那边几点。深夜发送时温柔提醒——"她那边现在是凌晨三点"。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        </svg>
+                    </div>
+                    <h3>云端同步</h3>
+                    <p>不用同时在线，消息自动送达。历史消息随时回听，重要的话不会丢。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 三步上手 -->
+    <section class="landing-section landing-steps">
+        <div class="landing-container">
+            <h2 class="landing-section-title">三步上手</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>连 WiFi</h3>
+                    <p>开机后手机扫一下，选你的WiFi，输入密码。一次设置，永久在线。</p>
+                </div>
+                <div class="step-arrow">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12,5 19,12 12,19"/>
+                    </svg>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>配对设备</h3>
+                    <p>三击按钮获取设备码，在网站上输入。设置名字、头像，选择要联系的人。</p>
+                </div>
+                <div class="step-arrow">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12,5 19,12 12,19"/>
+                    </svg>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>按住就说</h3>
+                    <p>长按录音，松开发送。屏幕黄色闪烁时短按播放。双击回听历史消息。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 不一样 -->
+    <section class="landing-section landing-different">
+        <div class="landing-container">
+            <h2 class="landing-section-title">和打电话、发微信有什么不同</h2>
+            <div class="different-grid">
+                <div class="different-item">
+                    <div class="different-icon different-icon-no">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </div>
+                    <div class="different-text">
+                        <strong>不像电话</strong>
+                        <span>不需要双方同时在线，不用约时间</span>
+                    </div>
+                </div>
+                <div class="different-item">
+                    <div class="different-icon different-icon-no">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </div>
+                    <div class="different-text">
+                        <strong>不像微信</strong>
+                        <span>不用解锁手机、打开App、找到聊天窗口</span>
+                    </div>
+                </div>
+                <div class="different-item">
+                    <div class="different-icon different-icon-no">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </div>
+                    <div class="different-text">
+                        <strong>不像智能音箱</strong>
+                        <span>没有隐私顾虑，消息只去该去的人</span>
+                    </div>
+                </div>
+                <div class="different-item">
+                    <div class="different-icon different-icon-yes">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>
+                    </div>
+                    <div class="different-text">
+                        <strong>给不想碰手机的人</strong>
+                        <span>老人和孩子，按一个按钮就够了</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 收尾 CTA -->
+    <section class="landing-section landing-cta">
+        <div class="landing-container landing-cta-content">
+            <p class="landing-cta-quote">给你的家人<br>一点光。</p>
+            <button class="btn btn-primary landing-cta-btn" onclick="enterApp()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12,5 19,12 12,19"/>
+                </svg>
+                进入设备配置
+            </button>
+            <p class="landing-cta-hint">注册账号后即可添加设备、配对通信</p>
+        </div>
+    </section>
+</div>
+
+<!-- ============================================================
      登录 / 注册页面
      ============================================================ -->
-<div id="auth-page" class="auth-page">
+<div id="auth-page" class="auth-page hidden">
     <div class="auth-card">
         <div class="auth-logo">
             <svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">

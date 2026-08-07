@@ -669,6 +669,369 @@ select {
     text-decoration: underline;
 }
 
+/* ---------- 着陆页 ---------- */
+.landing-page {
+    min-height: 100vh;
+}
+
+.landing-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Hero */
+.landing-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(ellipse at center top, #1a1f2e 0%, #0a0f1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-hero::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 140, 66, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.landing-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 24px;
+}
+
+.landing-hero-logo svg {
+    filter: drop-shadow(0 4px 24px rgba(255, 140, 66, 0.3));
+    animation: heroGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+    from { filter: drop-shadow(0 4px 24px rgba(255, 140, 66, 0.25)); }
+    to { filter: drop-shadow(0 4px 36px rgba(255, 214, 107, 0.4)); }
+}
+
+.landing-hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #FF8C42;
+    margin-top: 16px;
+    letter-spacing: 2px;
+}
+
+.landing-hero-tagline {
+    font-size: 18px;
+    color: #FFD66B;
+    margin-top: 4px;
+    letter-spacing: 1px;
+}
+
+.landing-hero-desc {
+    font-size: 16px;
+    color: rgba(255, 248, 240, 0.7);
+    margin-top: 24px;
+    line-height: 2;
+}
+
+.landing-cta-btn {
+    margin-top: 32px;
+    padding: 14px 36px;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+/* 通用 section */
+.landing-section {
+    padding: 80px 0;
+}
+
+.landing-section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 48px;
+}
+
+/* 故事 */
+.landing-story {
+    background: var(--color-surface-warm);
+    text-align: center;
+}
+
+.landing-story-quote {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.8;
+    margin-bottom: 28px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.landing-story-text {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    line-height: 2.2;
+}
+
+.landing-story-highlight {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* 功能卡片 */
+.landing-features {
+    background: var(--color-bg);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1.5px solid transparent;
+    transition: all var(--transition);
+}
+
+.feature-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.feature-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.feature-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+/* 三步上手 */
+.landing-steps {
+    background: var(--color-surface);
+}
+
+.steps-grid {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 12px;
+}
+
+.step-card {
+    flex: 1;
+    max-width: 240px;
+    background: var(--color-surface-warm);
+    border-radius: var(--radius-lg);
+    padding: 32px 20px;
+    text-align: center;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.step-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.step-card p {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.step-arrow {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+    opacity: 0.5;
+}
+
+/* 不一样 */
+.landing-different {
+    background: var(--color-bg);
+}
+
+.different-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.different-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.different-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.different-icon-no {
+    background: #FFF0F0;
+    color: var(--color-danger);
+}
+
+.different-icon-yes {
+    background: #E8F5E0;
+    color: var(--color-success);
+}
+
+.different-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.different-text strong {
+    font-size: 15px;
+    color: var(--color-text);
+}
+
+.different-text span {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+}
+
+/* 收尾 CTA */
+.landing-cta {
+    background: radial-gradient(ellipse at center, #1a1f2e 0%, #0a0f1a 100%);
+    text-align: center;
+    padding: 100px 24px;
+}
+
+.landing-cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-cta-quote {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFD66B;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.landing-cta-hint {
+    margin-top: 16px;
+    font-size: 13px;
+    color: rgba(255, 248, 240, 0.4);
+}
+
+/* 着陆页响应式 */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step-arrow {
+        transform: rotate(90deg);
+    }
+
+    .step-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .different-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .landing-hero-title {
+        font-size: 36px;
+    }
+
+    .landing-story-quote {
+        font-size: 18px;
+    }
+
+    .landing-cta-quote {
+        font-size: 24px;
+    }
+
+    .landing-section {
+        padding: 56px 0;
+    }
+
+    .landing-section-title {
+        font-size: 22px;
+        margin-bottom: 32px;
+    }
+}
+
 /* ---------- 响应式 ---------- */
 @media (max-width: 600px) {
     .form-row {
